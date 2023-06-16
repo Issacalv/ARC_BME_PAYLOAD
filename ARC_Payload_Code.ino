@@ -55,3 +55,20 @@ void setup() {
     while(1);
   }
 }
+
+
+void loop() {
+  
+  double Altitude_Value = Altitude(Pressure_On);
+  double* Acceleration_Value = Acceleration(Acceleration_On);
+  double* Gyroscope_Value = Gyroscope(Gyroscope_On);
+  float Temperature_Value = Temperature(Temperature_On);
+  float Humidity_Value = Humidity(Humidity_On);
+  //double Voltage_Value = Voltage(R1 , R2);
+  float* Voltage_Value = Voltage(Voltage_On);
+  
+  my_Serial_Monitor(Troubleshoot_On, Altitude_Value, Acceleration_Value, Gyroscope_Value, Temperature_Value, Humidity_Value, Voltage_Value);
+  my_Data_Logger(currentName, Data_On, Altitude_Value, Acceleration_Value, Gyroscope_Value, Temperature_Value, Humidity_Value, Voltage_Value);
+  
+ 
+}
