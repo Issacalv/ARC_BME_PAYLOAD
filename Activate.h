@@ -9,7 +9,7 @@
  const int Humidity_On = ON;
  const int Voltage_On = ON;
  const int Troubleshoot_On = ON;
+ const int Data_On = ON;
 
- 
 
  #endif  /* Activate_H */ 
